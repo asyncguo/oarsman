@@ -44,6 +44,7 @@ final class PersistenceController {
         container.viewContext.mergePolicy = NSMergeByPropertyObjectTrumpMergePolicy
         container.viewContext.automaticallyMergesChangesFromParent = true
         container.viewContext.name = "viewContext"
+        container.viewContext.undoManager = UndoManager()
     }
 
     // MARK: CRUD
@@ -103,6 +104,11 @@ final class PersistenceController {
         }
     }
 
+    func todo(with objectID: NSManagedObjectID, context: NSManagedObjectContext? = nil) -> Todo? {
+        let workingContext = context ?? viewContext
+        return try? workingContext.existingObject(with: objectID) as? Todo
+    }
+
     func update(_ todo: Todo, in context: NSManagedObjectContext? = nil, updates: (Todo) -> Void) throws {
         let workingContext = context ?? todo.managedObjectContext ?? viewContext
         try performSync(on: workingContext) {
@@ -139,6 +145,7 @@ final class PersistenceController {
         context.name = "backgroundContext"
         context.mergePolicy = NSMergeByPropertyObjectTrumpMergePolicy
         context.automaticallyMergesChangesFromParent = true
+        context.undoManager = UndoManager()
         return context
     }
 
