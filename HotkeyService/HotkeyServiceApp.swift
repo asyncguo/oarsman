@@ -7,7 +7,7 @@ struct HotkeyServiceApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(context: persistenceController.viewContext)
                 .environment(\.managedObjectContext, persistenceController.viewContext)
         }
 

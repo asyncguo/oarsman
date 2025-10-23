@@ -48,6 +48,7 @@ public extension Todo {
     }
 
     public static let defaultSortDescriptors: [NSSortDescriptor] = [
+        NSSortDescriptor(keyPath: \Todo.updatedAt, ascending: false),
         NSSortDescriptor(keyPath: \Todo.createdAt, ascending: false)
     ]
 

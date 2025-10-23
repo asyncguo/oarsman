@@ -1,4 +1,5 @@
 import AppKit
+import CoreData
 import SwiftUI
 
 @MainActor
@@ -48,7 +49,7 @@ final class CommandPaletteController: NSObject, ObservableObject, NSPopoverDeleg
         guard let button = statusItem.button else { return }
 
         if let hostingController = popover.contentViewController as? PaletteHostingController {
-            hostingController.rootView = CommandPaletteView(controller: self)
+            hostingController.update(controller: self)
         } else {
             popover.contentViewController = PaletteHostingController(controller: self)
         }
@@ -65,15 +66,19 @@ final class CommandPaletteController: NSObject, ObservableObject, NSPopoverDeleg
 }
 
 @MainActor
-private final class PaletteHostingController: NSHostingController<CommandPaletteView> {
+private final class PaletteHostingController: NSHostingController<AnyView> {
     init(controller: CommandPaletteController) {
-        super.init(rootView: CommandPaletteView(controller: controller))
+        super.init(rootView: Self.makeView(controller: controller))
         preferredContentSize = NSSize(width: 460, height: 360)
     }
 
     @available(*, unavailable)
     required dynamic init?(coder _: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+
+    func update(controller: CommandPaletteController) {
+        rootView = Self.makeView(controller: controller)
     }
 
     override func viewDidLoad() {
@@ -84,5 +89,12 @@ private final class PaletteHostingController: NSHostingController<CommandPalette
         view.layer?.masksToBounds = false
         view.layer?.backgroundColor = NSColor.clear.cgColor
         view.appearance = NSAppearance(named: .darkAqua)
+    }
+
+    private static func makeView(controller: CommandPaletteController) -> AnyView {
+        AnyView(
+            CommandPaletteView(controller: controller)
+                .environment(\.managedObjectContext, PersistenceController.shared.viewContext)
+        )
     }
 }
