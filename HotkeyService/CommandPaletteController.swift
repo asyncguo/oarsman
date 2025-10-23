@@ -9,7 +9,7 @@ final class CommandPaletteController: NSObject, ObservableObject, NSPopoverDeleg
 
     private let popover: NSPopover
     private weak var statusItem: NSStatusItem?
-    private let paletteSize = NSSize(width: 460, height: 360)
+    private let paletteSize = NSSize(width: 460, height: 400)
 
     override init() {
         popover = NSPopover()
@@ -68,7 +68,7 @@ final class CommandPaletteController: NSObject, ObservableObject, NSPopoverDeleg
 private final class PaletteHostingController: NSHostingController<CommandPaletteView> {
     init(controller: CommandPaletteController) {
         super.init(rootView: CommandPaletteView(controller: controller))
-        preferredContentSize = NSSize(width: 460, height: 360)
+        preferredContentSize = NSSize(width: 460, height: 400)
     }
 
     @available(*, unavailable)

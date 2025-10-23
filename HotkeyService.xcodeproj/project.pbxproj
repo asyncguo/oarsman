@@ -11,6 +11,7 @@ objects = {
 B1C3A3F72B0CDAA800C8FFAB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C3A3F62B0CDAA800C8FFAB /* AppDelegate.swift */; };
 B1C3A3FA2B0CDAA800C8FFAB /* CommandPaletteController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C3A3F92B0CDAA800C8FFAB /* CommandPaletteController.swift */; };
 B1C3A3FC2B0CDAA800C8FFAB /* CommandPaletteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C3A3FB2B0CDAA800C8FFAB /* CommandPaletteView.swift */; };
+B1E8A4D22C3D5F0A00AFA123 /* CommandPaletteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E8A4D12C3D5F0A00AFA123 /* CommandPaletteViewModel.swift */; };
 B1F4D4B02C3A2BBA00C6A8D1 /* Todo+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1F4D4A52C3A2B7A00C6A8D1 /* Todo+CoreDataClass.swift */; };
 B1F4D4B12C3A2BBA00C6A8D1 /* Todo+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1F4D4A62C3A2B7A00C6A8D1 /* Todo+CoreDataProperties.swift */; };
 B1F4D4B22C3A2BBA00C6A8D1 /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1F4D4A72C3A2B7A00C6A8D1 /* PersistenceController.swift */; };
@@ -27,6 +28,7 @@ B1F4D4B32C3A2BBA00C6A8D1 /* HotkeyService.xcdatamodeld in Sources */ = {isa = PB
 B1C3A3F62B0CDAA800C8FFAB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 B1C3A3F92B0CDAA800C8FFAB /* CommandPaletteController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandPaletteController.swift; sourceTree = "<group>"; };
 B1C3A3FB2B0CDAA800C8FFAB /* CommandPaletteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandPaletteView.swift; sourceTree = "<group>"; };
+B1E8A4D12C3D5F0A00AFA123 /* CommandPaletteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandPaletteViewModel.swift; sourceTree = "<group>"; };
 4F4EE046296C159600D6A62F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 4F4EE046296C159700D6A62F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 4F4EE046296C159A00D6A62F /* HotkeyService.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HotkeyService.entitlements; sourceTree = "<group>"; };
@@ -75,6 +77,7 @@ sourceTree = "<group>";
         B1C3A3F62B0CDAA800C8FFAB /* AppDelegate.swift */,
         B1C3A3F92B0CDAA800C8FFAB /* CommandPaletteController.swift */,
         B1C3A3FB2B0CDAA800C8FFAB /* CommandPaletteView.swift */,
+        B1E8A4D12C3D5F0A00AFA123 /* CommandPaletteViewModel.swift */,
         4F4EE046296C159600D6A62F /* Assets.xcassets */,
         4F4EE046296C159A00D6A62F /* HotkeyService.entitlements */,
         4F4EE046296C159B00D6A62F /* Info.plist */,
@@ -194,6 +197,7 @@ runOnlyForDeploymentPostprocessing = 0;
         B1C3A3F72B0CDAA800C8FFAB /* AppDelegate.swift in Sources */,
         B1C3A3FA2B0CDAA800C8FFAB /* CommandPaletteController.swift in Sources */,
         B1C3A3FC2B0CDAA800C8FFAB /* CommandPaletteView.swift in Sources */,
+        B1E8A4D22C3D5F0A00AFA123 /* CommandPaletteViewModel.swift in Sources */,
     );
 };
 
