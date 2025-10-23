@@ -11,6 +11,10 @@ objects = {
 B1C3A3F72B0CDAA800C8FFAB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C3A3F62B0CDAA800C8FFAB /* AppDelegate.swift */; };
 B1C3A3FA2B0CDAA800C8FFAB /* CommandPaletteController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C3A3F92B0CDAA800C8FFAB /* CommandPaletteController.swift */; };
 B1C3A3FC2B0CDAA800C8FFAB /* CommandPaletteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C3A3FB2B0CDAA800C8FFAB /* CommandPaletteView.swift */; };
+B1F4D4B02C3A2BBA00C6A8D1 /* Todo+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1F4D4A52C3A2B7A00C6A8D1 /* Todo+CoreDataClass.swift */; };
+B1F4D4B12C3A2BBA00C6A8D1 /* Todo+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1F4D4A62C3A2B7A00C6A8D1 /* Todo+CoreDataProperties.swift */; };
+B1F4D4B22C3A2BBA00C6A8D1 /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1F4D4A72C3A2B7A00C6A8D1 /* PersistenceController.swift */; };
+B1F4D4B32C3A2BBA00C6A8D1 /* HotkeyService.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B1F4D4A92C3A2B7A00C6A8D1 /* HotkeyService.xcdatamodeld */; };
 4F4EE046296C15A400D6A62F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F4EE046296C159600D6A62F /* Assets.xcassets */; };
 4F4EE046296C15A500D6A62F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F4EE046296C159700D6A62F /* Preview Assets.xcassets */; };
 4F4EE046296C15A800D6A62F /* Down in Frameworks */ = {isa = PBXBuildFile; productRef = 4F4EE046296C15A700D6A62F /* Down */; };
@@ -27,6 +31,10 @@ B1C3A3FB2B0CDAA800C8FFAB /* CommandPaletteView.swift */ = {isa = PBXFileReferenc
 4F4EE046296C159700D6A62F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 4F4EE046296C159A00D6A62F /* HotkeyService.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HotkeyService.entitlements; sourceTree = "<group>"; };
 4F4EE046296C159B00D6A62F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+B1F4D4A52C3A2B7A00C6A8D1 /* Todo+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Todo+CoreDataClass.swift"; sourceTree = "<group>"; };
+B1F4D4A62C3A2B7A00C6A8D1 /* Todo+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Todo+CoreDataProperties.swift"; sourceTree = "<group>"; };
+B1F4D4A72C3A2B7A00C6A8D1 /* PersistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
+B1F4D4A82C3A2B7A00C6A8D1 /* HotkeyService.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HotkeyService.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,28 +66,48 @@ name = Products;
 sourceTree = "<group>";
 };
 4F4EE046296C159900D6A62F /* HotkeyService */ = {
-isa = PBXGroup;
-children = (
-    4F4EE046296C159400D6A62F /* HotkeyServiceApp.swift */,
-    4F4EE046296C159500D6A62F /* ContentView.swift */,
-    B1C3A3F62B0CDAA800C8FFAB /* AppDelegate.swift */,
-    B1C3A3F92B0CDAA800C8FFAB /* CommandPaletteController.swift */,
-    B1C3A3FB2B0CDAA800C8FFAB /* CommandPaletteView.swift */,
-    4F4EE046296C159600D6A62F /* Assets.xcassets */,
-    4F4EE046296C159A00D6A62F /* HotkeyService.entitlements */,
-    4F4EE046296C159B00D6A62F /* Info.plist */,
-    4F4EE046296C159800D6A62F /* Preview Content */,
-);
+    isa = PBXGroup;
+    children = (
+        4F4EE046296C159400D6A62F /* HotkeyServiceApp.swift */,
+        4F4EE046296C159500D6A62F /* ContentView.swift */,
+        B1F4D4AB2C3A2B7A00C6A8D1 /* Persistence */,
+        B1F4D4AA2C3A2B7A00C6A8D1 /* Model */,
+        B1C3A3F62B0CDAA800C8FFAB /* AppDelegate.swift */,
+        B1C3A3F92B0CDAA800C8FFAB /* CommandPaletteController.swift */,
+        B1C3A3FB2B0CDAA800C8FFAB /* CommandPaletteView.swift */,
+        4F4EE046296C159600D6A62F /* Assets.xcassets */,
+        4F4EE046296C159A00D6A62F /* HotkeyService.entitlements */,
+        4F4EE046296C159B00D6A62F /* Info.plist */,
+        4F4EE046296C159800D6A62F /* Preview Content */,
+    );
+    sourceTree = SOURCE_ROOT;
+};
 
-sourceTree = SOURCE_ROOT;
+B1F4D4AA2C3A2B7A00C6A8D1 /* Model */ = {
+    isa = PBXGroup;
+    children = (
+        B1F4D4A52C3A2B7A00C6A8D1 /* Todo+CoreDataClass.swift */,
+        B1F4D4A62C3A2B7A00C6A8D1 /* Todo+CoreDataProperties.swift */,
+        B1F4D4A92C3A2B7A00C6A8D1 /* HotkeyService.xcdatamodeld */,
+    );
+    path = Model;
+    sourceTree = "<group>";
+};
+B1F4D4AB2C3A2B7A00C6A8D1 /* Persistence */ = {
+    isa = PBXGroup;
+    children = (
+        B1F4D4A72C3A2B7A00C6A8D1 /* PersistenceController.swift */,
+    );
+    path = Persistence;
+    sourceTree = "<group>";
 };
 4F4EE046296C159800D6A62F /* Preview Content */ = {
-isa = PBXGroup;
-children = (
-4F4EE046296C159700D6A62F /* Preview Assets.xcassets */,
-);
-path = "Preview Content";
-sourceTree = "<group>";
+    isa = PBXGroup;
+    children = (
+        4F4EE046296C159700D6A62F /* Preview Assets.xcassets */,
+    );
+    path = "Preview Content";
+    sourceTree = "<group>";
 };
 /* End PBXGroup section */
 
@@ -154,18 +182,34 @@ runOnlyForDeploymentPostprocessing = 0;
 
 /* Begin PBXSourcesBuildPhase section */
 4F4EE046296C159C00D6A62F /* Sources */ = {
-isa = PBXSourcesBuildPhase;
-buildActionMask = 2147483647;
-files = (
-    4F4EE046296C15A300D6A62F /* ContentView.swift in Sources */,
-    4F4EE046296C15A200D6A62F /* HotkeyServiceApp.swift in Sources */,
-    B1C3A3F72B0CDAA800C8FFAB /* AppDelegate.swift in Sources */,
-    B1C3A3FA2B0CDAA800C8FFAB /* CommandPaletteController.swift in Sources */,
-    B1C3A3FC2B0CDAA800C8FFAB /* CommandPaletteView.swift in Sources */,
-);
-
+    isa = PBXSourcesBuildPhase;
+    buildActionMask = 2147483647;
+    files = (
+        4F4EE046296C15A300D6A62F /* ContentView.swift in Sources */,
+        4F4EE046296C15A200D6A62F /* HotkeyServiceApp.swift in Sources */,
+        B1F4D4B22C3A2BBA00C6A8D1 /* PersistenceController.swift in Sources */,
+        B1F4D4B02C3A2BBA00C6A8D1 /* Todo+CoreDataClass.swift in Sources */,
+        B1F4D4B12C3A2BBA00C6A8D1 /* Todo+CoreDataProperties.swift in Sources */,
+        B1F4D4B32C3A2BBA00C6A8D1 /* HotkeyService.xcdatamodeld in Sources */,
+        B1C3A3F72B0CDAA800C8FFAB /* AppDelegate.swift in Sources */,
+        B1C3A3FA2B0CDAA800C8FFAB /* CommandPaletteController.swift in Sources */,
+        B1C3A3FC2B0CDAA800C8FFAB /* CommandPaletteView.swift in Sources */,
+    );
 };
-/* End PBXSourcesBuildPhase section */
+
+
+/* Begin XCVersionGroup section */
+B1F4D4A92C3A2B7A00C6A8D1 /* HotkeyService.xcdatamodeld */ = {
+    isa = XCVersionGroup;
+    children = (
+        B1F4D4A82C3A2B7A00C6A8D1 /* HotkeyService.xcdatamodel */,
+    );
+    currentVersion = B1F4D4A82C3A2B7A00C6A8D1 /* HotkeyService.xcdatamodel */;
+    path = HotkeyService.xcdatamodeld;
+    sourceTree = "<group>";
+    versionGroupType = wrapper.xcdatamodel;
+};
+/* End XCVersionGroup section */
 
 /* Begin XCBuildConfiguration section */
 4F4EE046296C158C00D6A62F /* Debug */ = {

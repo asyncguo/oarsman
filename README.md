@@ -17,6 +17,14 @@ Sources/                      # Shared Swift package sources
 Tests/                        # Unit tests for the shared package
 ```
 
+## Data Persistence
+
+- The macOS target includes a Core Data stack powered by `PersistenceController`.
+- The primary model is the `Todo` entity with UUID `id`, `title`, optional `content`, enum-backed `status`, optional `[String]` `tags`, plus `createdAt` and `updatedAt` timestamps.
+- The `statusRawValue` attribute stores the raw `TodoStatus` value to keep migrations lightweight while preserving a strongly typed API.
+- `tags` uses the `NSSecureUnarchiveFromData` transformer to persist `[String]` securely across releases.
+- Automatic lightweight migrations are enabled; introduce explicit mapping models if the schema diverges incompatibly.
+
 The Xcode target uses the SwiftUI lifecycle, treats warnings as errors, and enables the Hardened Runtime for release builds. The Swift package exposes the `HotkeyServiceKit` module and links the Down package as a placeholder dependency.
 
 ## Getting Started
